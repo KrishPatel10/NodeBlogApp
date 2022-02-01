@@ -1,0 +1,220 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .frm {
+            margin: 2% auto;
+        }
+
+        .mb-3 {
+            padding-top: 9%;
+            padding-bottom: 9%;
+            margin-top: -2%;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+
+        input[type=text] {
+            width: 100%;
+            border: 2px solid #aaa;
+            border-radius: 15px;
+            margin: 8px 0;
+            outline: none;
+            padding: 8px;
+            box-sizing: border-box;
+            transition: .3s;
+        }
+
+        input[type=text]:focus {
+            border-color: dodgerBlue;
+            box-shadow: 0 0 8px 0 dodgerBlue;
+        }
+
+        .inpt {
+            width: 100%;
+            border: 2px solid #aaa;
+            border-radius: 15px;
+            margin: 8px 0;
+            outline: none;
+            padding: 8px;
+            border-radius: 15px;
+            box-sizing: border-box;
+            transition: .3s;
+            height: 20%;
+        }
+
+        textarea:focus {
+            border-color: dodgerBlue;
+            box-shadow: 0 0 8px 0 dodgerBlue;
+        }
+
+        .inpt:focus {
+            outline: none !important;
+            border: 2px solid dodgerblue;
+            border-radius: 15px;
+            box-shadow: 0 0 10px dodgerblue;
+        }
+
+        .button {
+            /* Green */
+            border: none;
+            border-radius: 25px;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 40px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .button1 {
+            background-color: white;
+            color: black;
+            border: 2px solid #1234f8;
+        }
+
+        .button1:hover {
+            background-color: #1234f8;
+            color: white;
+        }
+
+        .button2 {
+            margin-top: 10%;
+            margin-bottom: 0%;
+            background-color: rgb(255, 255, 255);
+            color: black;
+            border: 2px solid #46cf10;
+        }
+
+        .button2:hover {
+            background-color: #00af0f;
+            color: rgb(255, 255, 255);
+        }
+
+        .btndiv {
+            display: table;
+            margin: 0 auto;
+        }
+
+        .content {
+            border-radius: 10%;
+            width: 50%;
+            margin: 2% auto;
+            color: white;
+            background: #24252a;
+        }
+
+        body {
+            overflow: hidden;
+            background: rgb(145, 26, 224);
+            background: linear-gradient(90deg, rgb(160, 51, 233) 0%, rgb(231, 62, 62) 79%, rgb(238, 173, 82) 100%);
+            background-size: 300% 300%;
+            animation: anim 5s linear infinite;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10%;
+            height: 7%;
+            background-color: #24252a;
+            font-size: large;
+        }
+
+
+        .nav__links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav__links li {
+            padding: 0px 20px;
+            color: whitesmoke;
+        }
+
+        .title {
+            margin-top: 10;
+        }
+
+        @keyframes anim {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+
+    <title>Update Blog | <%= blog.title %>
+    </title>
+</head>
+
+<body>
+    <header style="border-bottom: whitesmoke solid 4px;">
+        <nav>
+            <ul class="nav__links">
+                <li>Edit Your Blog </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main-body">
+        <div class="content">
+            <form action="/blogs/update/<%= blog._id %>" method="POST" id="edeet">
+                <div class="frm">
+                    <div class="mb-3">
+                        <label for="Title" class="title">Blog Title</label>
+                        <br>
+                        <input type="text" class="" id="Title " name="title" aria-describedby="BlogTitle"
+                            value="<%= blog.title %>" required>
+                        <label for="Snippet" class="">Snippet</label>
+                        <br>
+                        <input type="text" class="" id="snippet" name="snippet" aria-describedby="Blog Snippet"
+                            value="<%= blog.snippet %>" required>
+                        <label for="Description" class="">Description</label>
+                        <br>
+                        <textarea type="Description" class="inpt" id="description" name="desc"
+                            aria-describedby="Blog Description" required><%= blog.desc %></textarea>
+
+                        <div class="btndiv">
+                            <button onClick="location.href ='/blogs/<%= blog._id %>'"
+                                class="button button2">Back</button>
+                            <button class="button button1" onclick="myFunction();">Submit</button>
+                        </div>
+
+                        <script>
+                            function myFunction() {
+                                document.getElementById("edeet").submit();
+                            }
+                        </script>
+
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <footer>
+        <%- include('./partials/footer.ejs') %>
+    </footer>
+</body>
+
+</html>

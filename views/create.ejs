@@ -1,0 +1,46 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Create New Blog</title>
+    <%- include('./partials/header.ejs') %>
+</head>
+
+<body>
+    <div class="frmbody">
+        <form action="/blogs" method="POST" id="crt" enctype="multipart/form-data">
+            <div class="frm">
+                <div class="mb-3" style="text-align:center">
+                    <label for="Title" class="">Blog Title</label>
+                    <br>
+                    <input type="text" class="" id="Title " name="title" aria-describedby="BlogTitle" required>
+                    <br>
+                    <label for="Snippet" class="">Snippet</label>
+                    <br>
+                    <input type="text" class="" id="snippet" name="snippet" aria-describedby="Blog Snippet" required>
+                    <br>
+                    <label for="Description" class="">Description</label>
+                    <br>
+                    <textarea type="Description" class="inpt" id="description" name="desc"
+                        aria-describedby="Blog Description" required></textarea>
+                    <br>
+                    
+                    <label for="image-put" class="">Give an Image</label>
+                    <input type="file" class="" id="file" name="myfile" aria-describedby="BlogImg">
+
+                    <%- include('./button.ejs') %>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <footer>
+        <%- include('./partials/footer.ejs') %>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,441 @@
+.frm{
+  width:50%;
+  margin: 2% auto;
+}
+
+.pic{
+  background-image: url(/images/blogs.jpg);
+}
+
+.mb-3
+{
+  background-color: #24252a;
+  color:whitesmoke;
+  border-radius: 5%;
+  padding: 3%;
+}
+
+.frmbody{
+  overflow: hidden;
+  background: rgb(145,26,224);
+  background: linear-gradient(90deg, rgb(160, 51, 233) 0%, rgb(231, 62, 62) 79%, rgb(238, 173, 82) 100%);
+  background-size: 300% 300%;
+  animation: anim 5s linear infinite;
+  height: 100%;
+}
+
+input[type=text]{
+  width:75%;
+  border:2px solid #aaa;
+  border-radius:15px;
+  margin:8px 0;
+  outline:none;
+  padding:8px;
+  box-sizing:border-box;
+  transition:.3s;
+}
+
+input[type=text]:focus{
+  border-color:dodgerBlue;
+  box-shadow:0 0 8px 0 dodgerBlue;
+}
+
+input[type=password]{
+  width:75%;
+  border:2px solid #aaa;
+  border-radius:15px;
+  margin:8px 0;
+  outline:none;
+  padding:8px;
+  box-sizing:border-box;
+  transition:.3s;
+}
+
+input[type=password]:focus{
+  border-color:dodgerBlue;
+  box-shadow:0 0 8px 0 dodgerBlue;
+}
+
+.inpt{
+  width:75%;
+  border:2px solid #aaa;
+  border-radius:15px;
+  margin:8px 0;
+  outline:none;
+  padding:8px;
+  border-radius: 15px;
+  box-sizing:border-box;
+  transition:.3s;
+  height: 20%;
+}
+
+textarea:focus{
+  border-color:dodgerBlue;
+  box-shadow:0 0 8px 0 dodgerBlue;
+}
+
+.inpt:focus {
+  outline: none !important;
+  border:2px solid dodgerblue;
+  border-radius: 15px;
+  box-shadow: 0 0 10px dodgerblue;
+}
+
+.btndiv{
+  display: table;
+  margin:0 auto;
+}
+
+.serv ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 2%;
+}
+
+.serv ul li {
+  border-radius: 10%;
+  height: calc(50vh - 100px);
+  border-style: solid;
+  border-width: 1px;
+  list-style: none;
+  flex:0 0 32%;
+  margin:0.5%;
+}
+
+.serv ul li:hover{
+  cursor: pointer;
+  box-shadow: 10px 5px 5px rgb(73, 73, 73);
+}
+
+.desctitle{
+  text-align: center;
+}
+
+.mid{
+  overflow:scroll; 
+  height:85%;
+}
+
+.picmid
+{
+  height: 75%;
+  position: relative;
+  visibility: visible;
+}
+
+.content:hover  .picmid{
+  visibility: hidden;
+}
+
+.content:hover img{
+  animation: Visibl 0.5s linear;
+}
+
+.content:hover .text-centerd-class{
+  color: white;
+  border:5px double whitesmoke;
+  width: 80%;
+  top:20%;
+  font-size: 200%;
+  animation: MoveUp 0.5s linear;
+} 
+
+.content:hover .normal-snippet{
+  color: white;
+  position: absolute;
+  top: 35%;
+  font-size: 150%;
+  text-align: center;
+  animation: MoveSnip 0.5s linear;
+  border-top: none;
+}
+
+.main-body{
+  overflow: hidden;
+  background: rgb(145,26,224);
+  background: linear-gradient(90deg, rgb(160, 51, 233) 0%, rgb(231, 62, 62) 79%, rgb(238, 173, 82) 100%);
+  background-size: 300% 300%;
+  animation: anim 5s linear infinite;
+}
+
+.content .creds{
+  padding: 2%;
+  display: none;
+  color: white;
+  opacity: 0%;
+  top:100%;
+  width:100%;
+  text-align: center;
+}
+
+.content:hover .creds{
+  display:block;
+  border-top: 2px groove whitesmoke;
+  color: white;
+  animation: credsanim 1s linear;
+  opacity: 100%;
+  top:60%;
+}
+
+.pics{
+  border-radius: 15% 15% 0 0;
+  height: 100%;
+  filter: blur(5px);
+}
+
+.text-centerd-class {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+div #outer{
+  overflow: hidden;
+}
+
+.content{
+  position: relative;
+  border-radius: 10%;
+  background: whitesmoke ;
+}
+
+.content:hover{
+  border-radius: 10%;
+  overflow: hidden;
+  background: rgb(145,26,224);
+  background: linear-gradient(90deg, rgb(160, 51, 233) 0%, rgb(231, 62, 62) 79%, rgb(238, 173, 82) 100%);
+  background-size: 300% 300%;
+  animation: anim 5s linear infinite;
+  height: 100%;
+}
+
+.normal-snippet{
+  height: 25%;
+  width:100%;
+  padding-top: 2%;
+  text-align: center;
+  border-top:black 3px solid;
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.button3 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #f44336;
+}
+
+.button3:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+.bttns{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.delete{
+  margin-right: auto;
+  margin-left: auto;
+  width: 15%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  left: 30%;
+}
+
+.edit{
+  margin-right: auto;
+  margin-left: auto;
+  width: 15%;
+  right: 30%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.det-title{
+  text-align: center;
+  font-size: 7ch;
+}
+
+.det-pic{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  height: 35%;
+  width: 50%;
+  border-radius: 2%;
+}
+
+.cntnt{
+  width: 50%;
+  font-size: large;
+  margin-right: auto;
+  margin-left: auto;
+  border: solid grey;
+  border-width: 3px;
+  border-radius: 20%;
+  padding: 5%;
+}
+
+.cntnt p{
+  width: 100%;
+  word-wrap: break-word;
+}
+
+.details{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  overflow:scroll; 
+  height:85%;
+  width: 70%;
+  background: #24252a ;
+  color: white;
+  margin-top: 2%;
+  margin-bottom: 8%;
+}
+
+.mimd{
+  overflow:scroll; 
+  height:92%;
+}
+
+.bomdy{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  border-radius: 5%;
+  width: 40%;
+  background-color: #24252a;
+  border-spacing: 5%;
+  border-radius: 15%;
+  border:double white;
+}
+
+.imamge{
+  padding-top: 5%;
+  padding-bottom: 5%;
+  width:100%;
+}
+
+.imamgedet{
+  border-radius: 50%;
+  width: 30%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.timtle{
+  border-bottom: double whitesmoke;
+  color:whitesmoke;
+  text-align: center;
+  padding-bottom: 5%;
+  padding-top: 5%;
+}
+
+.demsc{
+  text-align: center;
+  padding-top:5%;
+  padding-bottom: 10%;
+  color:whitesmoke;
+}
+.demsc p{
+  padding-top: 0%;
+  padding-bottom: 0%;
+}
+
+
+@keyframes MoveUp {
+  0%{
+    top: 50%;
+  }
+  80% {
+    top: 15%;
+  }
+  100%{
+    top:20%;
+  }
+}
+
+@keyframes MoveSnip {
+  0%{
+    top: 77%
+  }
+  80% {
+    top: 30%;
+  }
+  100%{
+    top:35%;
+  }
+}
+
+@keyframes Visibl {
+  0%{
+    opacity: 100%;
+  }
+  100%{
+    opacity: 0%;
+  }
+}
+
+@keyframes anim{
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes credsanim {
+  0%{
+    opacity: 0%;
+    top:100%;
+  }
+  100%{
+    opacity: 100%;
+    top:60%;
+  }
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+*{
+  font-family: Roboto;
+}

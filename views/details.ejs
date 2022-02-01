@@ -1,0 +1,55 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <%- include('./partials/header.ejs') %>
+</head>
+
+<body>
+    <div class="main-body">
+        <div class="details">
+            <h1 class="det-title">
+                <%= blog.title %>
+            </h1>
+            <div class='det-pics'>
+                <img src="/uploads/<%= blog.image %> " alt="img here" class="det-pic" height="100%">
+            </div>
+            <div class="cntnt">
+                <p>
+                    <%= blog.desc %>
+                </p>
+            </div>
+            <div class="bttns">
+                <a class="edit button button2" href="/blogs/update/<%= blog.id %>">Edit</a>
+                <a class="delete button button3" data-doc="<%= blog._id %>">delete</a>
+            </div>
+            <%- include('./partials/footer.ejs') %>
+    
+        </div>
+    </div>
+
+    <script>
+        const trash = document.querySelector('a.delete');
+
+        trash.addEventListener('click', (e) => {
+            const endpoint = `/blogs/${trash.dataset.doc}`;
+
+            fetch(endpoint, {
+                method: 'DELETE',
+            })
+                .then((response) => response.json())
+                .then((data) => window.location.href = data.redirect)
+                .catch((err) => {
+                    console.log(err);
+                });
+        })
+    </script>
+</body>
+
+</html>

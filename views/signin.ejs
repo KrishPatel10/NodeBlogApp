@@ -1,0 +1,48 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Sign In</title>
+</head>
+
+<body style="
+    overflow: hidden;
+    background: rgb(145,26,224);
+    background: linear-gradient(90deg, rgba(145,26,224,1) 0%, rgba(253,29,29,1) 79%, rgba(252,176,69,1) 100%);
+    background-size: 300% 300%;
+    animation: anim 5s linear infinite;">
+
+    <div class="mimd">
+        <div class="bomdy">
+
+            <div class="timtle">
+                <h2>Sign In</h2>
+            </div>
+            <form action="/register" method="POST" id="myForm">
+                <div class="frm"  style="color: whitesmoke; text-align: center;">
+                    <p><strong>Name</strong></p>
+                    <input type="text" class="" id="name" name="name" aria-describedby="name" required>
+                    <br>
+                    <label for="Snippet" class="">Email</label>
+                    <br>
+                    <input type="text" class="" id="snippet" name="email" aria-describedby="email" required>
+                    <p><strong>Password</strong></p>
+                    <input type="password" class="" id="password" name="password" aria-describedby="password" required>
+                    <br style="height: 2%">
+                    <%- include('./button.ejs') %>
+                    <p>Already Have an Account....</p>
+                    <a href="/login" style="text-decoration: none;color: azure;">Click here to Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <%- include('./partials/footer.ejs') %>
+    </footer>
+</body>
+
+</html>

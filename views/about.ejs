@@ -1,0 +1,43 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>About</title>
+    <%- include('./partials/header.ejs') %>
+</head>
+
+<body style="
+    overflow: hidden;
+    background: rgb(145,26,224);
+    background: linear-gradient(90deg, rgba(145,26,224,1) 0%, rgba(253,29,29,1) 79%, rgba(252,176,69,1) 100%);
+    background-size: 300% 300%;
+    animation: anim 5s linear infinite;">
+
+    <div class="mimd">
+        <div class="bomdy">
+            <div class="imamge">
+                <img src="/images/blog-user.jpg" class='imamgedet' alt='dev image'>
+            </div>
+
+            <div class="timtle">
+                <h2>Devlopers Info</h2>
+            </div>
+
+            <div class="demsc">
+                <p><strong>Name : </strong>Patel Krish Dipakkumar</p>
+                <p><strong>StudentID : </strong>202001452</p>
+                <p><strong>Phone : </strong>+91 8200303823</p>
+                <p><strong>Email id : </strong>krishpatel18984@gmail.com</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <%- include('./partials/footer.ejs') %>
+    </footer>
+</body>
+
+</html>

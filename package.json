@@ -1,0 +1,36 @@
+{
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.1",
+    "dotenv": "^15.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "mongoose": "^6.1.6",
+    "multer": "^1.4.4",
+    "node-localstorage": "^2.2.1",
+    "path": "^0.12.7"
+  },
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "name": "woc4.0-final",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KrishPatel10/woc4.0-node-blog-app-KrishPatel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KrishPatel10/woc4.0-node-blog-app-KrishPatel/issues"
+  },
+  "homepage": "https://github.com/KrishPatel10/woc4.0-node-blog-app-KrishPatel#readme",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

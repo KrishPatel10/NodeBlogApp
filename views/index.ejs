@@ -1,0 +1,56 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Home</title>
+    <%- include('./partials/header.ejs') %>
+</head>
+
+<body style="background-color: #24252a ;">
+    <div class="mid serv">
+        <% if(blogs.length> 0) { %>
+            <ul>
+                <% blogs.forEach(element=> { %>
+                    <li onclick="location.href='/blogs/<%= element.id %>';">
+                        <div class='content'>
+                            <div id='outer'>
+                                <div class='picmid'>
+                                    <img src="/uploads/<%= element.image %> " alt="pics" class="pics" height="100%" width="100%">
+                                </div>
+                            </div>
+
+                            <h2 class="text-centerd-class">
+                                <p class="desctitle">
+                                    <%= element.title %>
+                                </p>
+                            </h2>
+                            <div class="normal-snippet">
+                                <p>
+                                    <%= element.snippet %>
+                                </p>
+                            </div>
+                            
+                            <div class="creds">
+                                <% if(element.author==undefined){ element.author = "unknown"} %>
+                                <% if(element.date==undefined){ element.date = "unknown"} %>
+                                <p> Written By: <%= element.author %></p>
+                                <p> Date: <%= element.date %></p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <% }); %>
+            </ul>
+            <% } else { %>
+                <h1 style="color: whitesmoke; text-align:center; margin-top:15%">There's nothing to show</h1>
+                <% } %>
+    </div>
+    <footer>
+        <%- include('./partials/footer.ejs') %>
+    </footer>
+</body>
+
+</html>
